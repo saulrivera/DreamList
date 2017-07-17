@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dPY-2e-aag">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,11 +19,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ODX-lj-Z8h">
-                                <rect key="frame" x="20" y="72" width="374" height="29"/>
+                                <rect key="frame" x="16" y="72" width="343" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="FhP-YX-WNC"/>
                                 </constraints>
@@ -35,18 +35,18 @@
                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ak8-c9-51C">
-                                <rect key="frame" x="20" y="120" width="374" height="616"/>
+                                <rect key="frame" x="16" y="120" width="343" height="547"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="150" id="FyP-vf-WqM">
-                                        <rect key="frame" x="0.0" y="28" width="374" height="150"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="150" id="FyP-vf-WqM" customClass="ItemCell" customModule="DreamList" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FyP-vf-WqM" id="4Ty-hH-FSH">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="150"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="149.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F0d-gN-iPl">
-                                                    <rect key="frame" x="8" y="8" width="358" height="133.66666666666666"/>
+                                                    <rect key="frame" x="8" y="8" width="327" height="133.5"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tesla" translatesAutoresizingMaskIntoConstraints="NO" id="I3q-z4-QXC">
                                                             <rect key="frame" x="8" y="17" width="100" height="100"/>
@@ -56,7 +56,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tesla Model S" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E0W-N9-Q47">
-                                                            <rect key="frame" x="116" y="8" width="234" height="21"/>
+                                                            <rect key="frame" x="116" y="8" width="203" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="21" id="JJc-1J-ugw"/>
                                                             </constraints>
@@ -65,7 +65,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$80,000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jH7-Km-4OT">
-                                                            <rect key="frame" x="116" y="37" width="234" height="21"/>
+                                                            <rect key="frame" x="116" y="37" width="203" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="21" id="b7d-34-wNv"/>
                                                             </constraints>
@@ -74,7 +74,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Muy bonito carro, usted puede cmprarlo cuando usted quiera" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rm8-EF-88d">
-                                                            <rect key="frame" x="116" y="66" width="234" height="60"/>
+                                                            <rect key="frame" x="116" y="66" width="203" height="60"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -109,6 +109,12 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="details" destination="rm8-EF-88d" id="WSG-Nv-JND"/>
+                                            <outlet property="price" destination="jH7-Km-4OT" id="xo2-Dr-0SR"/>
+                                            <outlet property="thum" destination="I3q-z4-QXC" id="TUy-u5-lLo"/>
+                                            <outlet property="title" destination="E0W-N9-Q47" id="qwd-tI-Dds"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -129,6 +135,10 @@
                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="segment" destination="ODX-lj-Z8h" id="byf-Ml-TVY"/>
+                        <outlet property="tableView" destination="ak8-c9-51C" id="r3R-uf-UWB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

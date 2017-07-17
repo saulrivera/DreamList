@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B209B05E1F1C4F750041A7FD /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B209B05D1F1C4F750041A7FD /* MaterialView.swift */; };
+		B209B0601F1C527A0041A7FD /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B209B05F1F1C527A0041A7FD /* ItemCell.swift */; };
 		B2CF407E1F1C448700FAD5BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CF407D1F1C448700FAD5BD /* AppDelegate.swift */; };
 		B2CF40801F1C448700FAD5BD /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CF407F1F1C448700FAD5BD /* MainVC.swift */; };
 		B2CF40831F1C448700FAD5BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2CF40811F1C448700FAD5BD /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		B209B05D1F1C4F750041A7FD /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
+		B209B05F1F1C527A0041A7FD /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		B2CF407A1F1C448700FAD5BD /* DreamList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DreamList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2CF407D1F1C448700FAD5BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2CF407F1F1C448700FAD5BD /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				B209B05D1F1C4F750041A7FD /* MaterialView.swift */,
+				B209B05F1F1C527A0041A7FD /* ItemCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B209B0601F1C527A0041A7FD /* ItemCell.swift in Sources */,
 				B2CF40801F1C448700FAD5BD /* MainVC.swift in Sources */,
 				B2CF407E1F1C448700FAD5BD /* AppDelegate.swift in Sources */,
 				B2CF40C01F1C482B00FAD5BD /* ItemType+CoreDataProperties.swift in Sources */,
