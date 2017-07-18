@@ -9,8 +9,9 @@
 import UIKit
 import CoreData
 
-class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    @IBOutlet weak var imageItem: UIImageView!
     @IBOutlet weak var storePicker: UIPickerView!
     @IBOutlet weak var titleField: UITextField!
     @IBOutlet weak var priceField: UITextField!
@@ -18,6 +19,8 @@ class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
     
     var stores = [Store]()
     var itemToEdit: Item?
+    
+    var imagePicker: UIImagePickerController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +31,8 @@ class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
 
         storePicker.delegate = self
         storePicker.dataSource = self
+        imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
         
 //        let store = Store(context: context)
 //        store.name = "Best Buy"
@@ -91,6 +96,10 @@ class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
             item = itemToEdit
         }
         
+        let picture = Image(context: context)
+        picture.image = imageItem.image
+        item.toImage = picture
+        
         if let title = titleField.text {
             item.title = title
         }
@@ -110,6 +119,7 @@ class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
             titleField.text = item.title
             priceField.text = String(item.price)
             detailsField.text = item.details
+            imageItem.image = item.toImage?.image as? UIImage
             
             if let store = item.toStore {
                 var index = 0
@@ -132,4 +142,17 @@ class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         ad.saveContext()
         navigationController?.popViewController(animated: true)
     }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let img = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            imageItem.image = img
+        }
+        imagePicker.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func addImage(_ sender: UIButton) {
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    
 }
