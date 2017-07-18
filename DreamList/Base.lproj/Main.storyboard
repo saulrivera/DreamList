@@ -38,7 +38,7 @@
                                 <rect key="frame" x="16" y="120" width="343" height="547"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="150" id="FyP-vf-WqM" customClass="ItemCell" customModule="DreamList" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="150" id="FyP-vf-WqM" customClass="ItemCell" customModule="DreamList" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FyP-vf-WqM" id="4Ty-hH-FSH">
@@ -46,7 +46,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F0d-gN-iPl">
-                                                    <rect key="frame" x="8" y="8" width="272" height="133.5"/>
+                                                    <rect key="frame" x="8" y="8" width="327" height="133.5"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tesla" translatesAutoresizingMaskIntoConstraints="NO" id="I3q-z4-QXC">
                                                             <rect key="frame" x="8" y="17" width="100" height="100"/>
@@ -56,7 +56,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tesla Model S" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E0W-N9-Q47">
-                                                            <rect key="frame" x="116" y="8" width="148" height="21"/>
+                                                            <rect key="frame" x="116" y="8" width="203" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="21" id="JJc-1J-ugw"/>
                                                             </constraints>
@@ -65,7 +65,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$80,000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jH7-Km-4OT">
-                                                            <rect key="frame" x="116" y="37" width="148" height="21"/>
+                                                            <rect key="frame" x="116" y="37" width="203" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="21" id="b7d-34-wNv"/>
                                                             </constraints>
@@ -74,7 +74,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Muy bonito carro, usted puede cmprarlo cuando usted quiera" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rm8-EF-88d">
-                                                            <rect key="frame" x="116" y="66" width="148" height="60"/>
+                                                            <rect key="frame" x="116" y="66" width="203" height="60"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -141,7 +141,7 @@
                     <connections>
                         <outlet property="segment" destination="ODX-lj-Z8h" id="byf-Ml-TVY"/>
                         <outlet property="tableView" destination="ak8-c9-51C" id="r3R-uf-UWB"/>
-                        <segue destination="sjq-tf-gXu" kind="showDetail" identifier="ItemDetailsVC" id="LGD-gt-cbn"/>
+                        <segue destination="sjq-tf-gXu" kind="show" identifier="ItemDetailsVC" id="LGD-gt-cbn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -257,9 +257,11 @@
                             <constraint firstItem="75t-c7-8s5" firstAttribute="top" secondItem="JjV-8b-V4f" secondAttribute="bottom" constant="18" id="wis-OJ-eTK"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Add/Edit" id="Mun-2G-jYj">
-                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="KAm-Rz-vsL">
-                            <color key="tintColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <navigationItem key="navigationItem" title="Add/Edit" id="VHd-GW-1je">
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="aR1-pX-Mgo">
+                            <connections>
+                                <action selector="deletePressed:" destination="sjq-tf-gXu" id="6rK-Ki-fEA"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -302,6 +304,6 @@
         <image name="tesla" width="800" height="489"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="all-vu-Og1"/>
+        <segue reference="LGD-gt-cbn"/>
     </inferredMetricsTieBreakers>
 </document>
