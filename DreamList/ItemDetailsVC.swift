@@ -101,17 +101,14 @@ class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         return 2
     }
     
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        //update when selected
-    }
-    
     func getStores() {
         let fetchRequest: NSFetchRequest<Store> = Store.fetchRequest()
         do {
             self.stores = try context.fetch(fetchRequest)
             self.storePicker.reloadAllComponents()
         } catch {
-            //
+            let error = error as NSError
+            print("\(error)")
         }
     }
     
